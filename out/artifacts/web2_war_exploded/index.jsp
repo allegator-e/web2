@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Tiloaria
   Date: 17.10.2020
@@ -20,9 +20,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <div class="base">
   <p><img src="resources/cattt.gif" id="cat" alt="cat"></p>
-  <form class="xyr_in" id="form">
+  <form class="xyr_in" id="form" method="get">
     <div class="x_in">
-      <strong>Choose X:</strong>
+      <strong class="chooseX">Choose X:</strong>
       <label>
                     <span class="radio_x"><input name="x" type="radio" value="-2"> -2
                     <input name="x" type="radio" value="-1.5"> -1.5
@@ -35,22 +35,22 @@
                     <input name="x" type="radio" value="2"> 2</span>
       </label>
     </div>
-    <div class="text">
+    <div class="textY">
       <label>
         <strong>Enter Y:</strong>
         <span class="exceptionY"></span>
-        <input type="text" id="yInput" class="y_in" placeholder="Введите Y∈[-3;5]">
+        <input type="text" name="y" id="yInput" class="y_in" placeholder="Введите Y∈[-3;5]">
       </label>
     </div>
-    <div class="text">
+    <div class="textR">
       <label>
         <strong>Enter R:</strong>
         <span class="exceptionR"></span>
-        <input type="text" id="rInput" class="r_in" placeholder="Введите R∈[2;5]">
+        <input type="text" name="r" id="rInput" class="r_in" placeholder="Введите R∈[2;5]">
       </label>
     </div>
     <div class="send_clear_but">
-      <button type="submit" id="send"><span class="send_clear">Отправить</span></button>
+      <button type="submit" id="send" onclick="location.href='/controller'"><span class="send_clear">Отправить</span></button>
       <button type="button" id="clear"><span class="send_clear">Сбросить</span></button>
     </div>
   </form>
@@ -91,6 +91,15 @@
 
       <polygon points="140,200 200,200 200,80" fill="purple" fill-opacity="0.3" stroke="purple"></polygon>
 
+      <%
+        System.out.println("Enter parameter:\nX:"+request.getParameter("x")+"\nY:"+request.getParameter("y")+"\nR:"+request.getParameter("r"));
+        ArrayList<String> points = (ArrayList<String>) request.getServletContext().getAttribute("points");
+
+        if (points != null )
+          for(String point: points)
+            out.println(point);
+      %>
+
       <circle r="3" cx="200" cy="200" id="point" fill="black" ></circle>
     </svg>
   </div>
@@ -103,6 +112,13 @@
       <th>TIME</th>
       <th>RUNTIME</th>
     </tr>
+    <%
+      ArrayList<String> rows = (ArrayList<String>) request.getServletContext().getAttribute("rows");
+
+      if (rows != null )
+        for(String row: rows)
+          out.println(row);
+    %>
   </table>
 </div>
 </body>

@@ -42,28 +42,6 @@ function exceptionR(message) {
 }
 
 $(function () {
-    $('#send').on('click', function (event) {
-        XYR();
-        if(checkY(x, y, r)) {
-            if (checkR(x, y, r)) {
-                $.get("controller",
-                    {x: x, y: y, r: r},
-                    function (msg) {
-                        $('.result').append(msg);
-                    }
-                )
-            }
-        }
-        event.preventDefault()
-    });
-    $('#clear').on('click', function (event) {
-        $.ajax({
-            success: function () {
-                $('.result_php').remove();
-            }
-        });
-        event.preventDefault()
-    });
     $('.x_in').on('input', function (){
         XYR();
         if (checkR(x,y,r))

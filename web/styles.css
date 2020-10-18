@@ -27,7 +27,7 @@ body{
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     background-color: rgba(128,0,128,0.5);
-    padding: 5px 10px 10px 3.5%;
+    padding: 0.5% 0.5% 0.5% 3%;
 }
 @font-face {
     font-family: Jura;
@@ -42,7 +42,7 @@ body{
 }
 .xyr_in{
     width: 600px;
-    height: 230px;
+    height: 250px;
     background-color: rgba(63,252,255,0.5);
     margin-left: 3%;
     margin-top: 1%;
@@ -66,11 +66,11 @@ body{
     padding: 0.4%;
     box-shadow: inset 0 0 6px;
 }
-.text{
+.x_in{
     margin-left: 0.5%;
     margin-top: 0.5%;
     width: 48%;
-    height: 40%;
+    height: 45%;
     border-style: double;
     border-color: white;
     background-color: #ff7de8;
@@ -80,18 +80,31 @@ body{
     float: left;
     box-shadow: inset 0 0 6px;
 }
-.x_in{
+.chooseX{
+    margin-left: 65%;
+}
+.radio_x{
     width: 98%;
-    height: 40%;
+    height: 50%;
     border-radius: 20px;
-    padding-left: 1%;
+    padding-left: 3%;
+}
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: after-edge;
+    margin-left: 3%;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 button, select, input:focus{
     outline: none;
 }
-.select{
+.textY{
     width: 48%;
-    height: 40%;
+    height:45%;
     border-style: double;
     border-color: white;
     background-color: #ff7de8;
@@ -104,15 +117,16 @@ button, select, input:focus{
     box-shadow: inset 0 0 6px;
 }
 .y_in{
-    width: 98%;
-    height: 40%;
+    width: 95%;
+    height: 35%;
     border-radius: 20px;
     padding-left: 1%;
     border-color: black;
+    margin-top: 2%;
 }
-.r_in{
+.textR{
     width: 48%;
-    height: 50%;
+    height: 45%;
     border-style: double;
     border-color: white;
     background-color: #ff7de8;
@@ -124,22 +138,17 @@ button, select, input:focus{
     margin-left: 0.5%;
     box-shadow: inset 0 0 6px;
 }
-.radio_r{
-    margin-left: 1%;
-}
-input[type="radio"]{
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    cursor: pointer;
-    vertical-align: middle;
-    margin-left: 2%;
-    margin-bottom: 2%;
+.r_in{
+    width: 95%;
+    height: 35%;
+    border-radius: 20px;
+    padding-left: 1%;
+    border-color: black;
     margin-top: 2%;
 }
 .send_clear_but{
     width: 48%;
-    height: 50%;
+    height: 45%;
     border-style: double;
     border-color: white;
     background-color: #ffb8f1;
@@ -147,8 +156,8 @@ input[type="radio"]{
     float: right;
     margin-top: 2.5%;
     margin-right: 0.5%;
-    padding-top: 3.5%;
-    padding-left: 5%;
+    padding-top: 5%;
+    padding-left: 6%;
     box-shadow: inset 0 0 6px;
 }
 .send_clear{
@@ -193,5 +202,20 @@ input[type="radio"]{
 }
 .exception {
     color: black;
-    font-size: medium;
+    font-size: small;
+}
+#back_but{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+    border-color: black;
+    background-image: -webkit-linear-gradient(left, yellow, palevioletred);
+    box-shadow: 0 0 6px grey;
+    font-size: large;
+    font-family: Jura, serif;
+    font-weight: bold;
+    margin-left: 90%;
+    margin-top: 25%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
