@@ -83,10 +83,10 @@
             } else out.println("<p>There are no points yet!</p>");
         %>
     </table>
+    <div>
+        <button id="back_but" onclick="location.href='/web2_war/'">Back</button>
+    </div>
 </div>
 </body>
-<div>
-    <button id="back_but" onclick="location.href='/web2_war/'">Back</button>
-</div>
 <script src="scripts/script.js"></script>
 </html>

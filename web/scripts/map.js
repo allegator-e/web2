@@ -14,7 +14,7 @@ $(function () {
             point1(x_val, y, r);
             $('input[name=x][value=\"' + x_val + '\"]').prop('checked', true);
             $('.y_in').val(((200 - y) * r / 120).toFixed(2));
-        }else alert("Введите корректный R, а то незя");
+        }else alert("Введите корректный R, а то низзя");
     });
 });
 
